@@ -36,7 +36,7 @@ int main() {
         printf("0 - Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
-        getchar(); // Limpar buffer do enter
+        getchar(); 
 
         switch (opcao) {
             case 1:
@@ -75,7 +75,7 @@ void adicionarLivro() {
     Livro novoLivro;
     printf("Informe o ID do livro: ");
     scanf("%d", &novoLivro.id);
-    getchar(); // Limpar buffer do enter
+    getchar();
     printf("Informe o titulo: ");
     fgets(novoLivro.titulo, 100, stdin);
     strtok(novoLivro.titulo, "\n");
@@ -204,7 +204,7 @@ void atualizarLivro() {
     int id, encontrado = 0;
     printf("Informe o ID do livro a ser atualizado: ");
     scanf("%d", &id);
-    getchar(); // Limpar buffer do enter
+    getchar(); 
 
     for (int i = 0; i < totalLivros; i++) {
         if (livros[i].id == id) {
