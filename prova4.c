@@ -78,16 +78,16 @@ void adicionarLivro() {
     getchar(); // Limpar buffer do enter
     printf("Informe o titulo: ");
     fgets(novoLivro.titulo, 100, stdin);
-    strtok(novoLivro.titulo, "\n"); // Remover newline
+    strtok(novoLivro.titulo, "\n");
     printf("Informe o genero: ");
     fgets(novoLivro.genero, 50, stdin);
-    strtok(novoLivro.genero, "\n"); // Remover newline
+    strtok(novoLivro.genero, "\n");
     printf("Informe o autor: ");
     fgets(novoLivro.autor, 100, stdin);
-    strtok(novoLivro.autor, "\n"); // Remover newline
+    strtok(novoLivro.autor, "\n");
     printf("Informe a editora: ");
     fgets(novoLivro.editora, 100, stdin);
-    strtok(novoLivro.editora, "\n"); // Remover newline
+    strtok(novoLivro.editora, "\n");
 
     int opcao;
     printf("Deseja adicionar o livro no inicio ou no fim do arquivo?\n");
@@ -96,10 +96,10 @@ void adicionarLivro() {
     printf("Escolha uma opcao: ");
     scanf("%d", &opcao);
 
-    fseek(arquivo, 0, SEEK_END); // Mover para o final do arquivo
+    fseek(arquivo, 0, SEEK_END);
 
     if (opcao == 1) {
-        fseek(arquivo, 0, SEEK_SET); // Mover para o início do arquivo
+        fseek(arquivo, 0, SEEK_SET);
     }
 
     fprintf(arquivo, "%d|%s|%s|%s|%s\n", novoLivro.id, novoLivro.titulo, novoLivro.genero, novoLivro.autor, novoLivro.editora);
